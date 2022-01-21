@@ -20,5 +20,10 @@ const estilos = StyleSheet.create({
         width: "100%",
         position: "absolute",
         textAlign: "center",
+        fontSize: 16,
+        lineHeight: 26,
+        color: "white",
+        fontWeight: "bold",
+        padding: 16,
     },
 })
