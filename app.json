@@ -8,7 +8,15 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#ffffff",
+      "ios": {
+        "bundleIdentifier": "orgs-cesta-ios",
+        "buildNumber": "1.0.0"
+      },
+      "android": {
+        "package": "orgs-cesta-android",
+        "versionCode": 1
+      }
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -23,7 +31,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.drift3rx.orgscesta"
     },
     "web": {
       "favicon": "./assets/favicon.png"
