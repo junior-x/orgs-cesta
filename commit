@@ -1,0 +1,467 @@
+[1mdiff --git a/.expo/packager-info.json b/.expo/packager-info.json[m
+[1mindex f46dc50..b82e892 100644[m
+[1m--- a/.expo/packager-info.json[m
+[1m+++ b/.expo/packager-info.json[m
+[36m@@ -1,7 +1,7 @@[m
+ {[m
+   "devToolsPort": 19002,[m
+[31m-  "expoServerPort": null,[m
+[31m-  "packagerPort": null,[m
+[32m+[m[32m  "expoServerPort": 19000,[m
+[32m+[m[32m  "packagerPort": 19000,[m
+   "packagerPid": null,[m
+   "expoServerNgrokUrl": null,[m
+   "packagerNgrokUrl": null,[m
+[1mdiff --git a/App.js b/App.js[m
+[1mindex a40bd62..789d2fe 100644[m
+[1m--- a/App.js[m
+[1m+++ b/App.js[m
+[36m@@ -1,22 +1,22 @@[m
+[31m-import { StatusBar, SafeAreaView, View } from 'react-native';[m
+[31m-import Cesta from "./src/telas/Cesta/Cesta"[m
+[31m-import { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';[m
+[31m-[m
+[31m-export default function App() {[m
+[31m-[m
+[31m-  const [fonteCarregada] = useFonts({[m
+[31m-    'MontserratRegular': Montserrat_400Regular,[m
+[31m-    'MontserratBold': Montserrat_700Bold,[m
+[31m-  });[m
+[31m-[m
+[31m-  if (!fonteCarregada) {[m
+[31m-    return <View />;[m
+[31m-  }[m
+[31m-[m
+[31m-  return ([m
+[31m-    <SafeAreaView>[m
+[31m-      <StatusBar/>[m
+[31m-      <Cesta/>[m
+[31m-    </SafeAreaView>[m
+[31m-  );[m
+[32m+[m[32mimport { StatusBar, SafeAreaView, View } from 'react-native';[m[41m[m
+[32m+[m[32mimport Cesta from "./src/telas/Cesta/Cesta"[m[41m[m
+[32m+[m[32mimport { useFonts, Montserrat_400Regular, Montserrat_700Bold } from '@expo-google-fonts/montserrat';[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mexport default function App() {[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m  const [fonteCarregada] = useFonts({[m[41m[m
+[32m+[m[32m    'MontserratRegular': Montserrat_400Regular,[m[41m[m
+[32m+[m[32m    'MontserratBold': Montserrat_700Bold,[m[41m[m
+[32m+[m[32m  });[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m  if (!fonteCarregada) {[m[41m[m
+[32m+[m[32m    return <View />;[m[41m[m
+[32m+[m[32m  }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m  return ([m[41m[m
+[32m+[m[32m    <SafeAreaView>[m[41m[m
+[32m+[m[32m      <StatusBar />[m[41m[m
+[32m+[m[32m      <Cesta />[m[41m[m
+[32m+[m[32m    </SafeAreaView>[m[41m[m
+[32m+[m[32m  );[m[41m[m
+ }[m
+\ No newline at end of file[m
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 436c067..7b16f7d 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1,31 +1,52 @@[m
+[31m-# orgs-cesta[m
+[31m-React Native App[m
+[31m-[m
+[31m-# [m
+[31m-[m
+[31m- <h1 align="center">Hackintosh</h1>[m
+[31m- <p align="center">🚀</p>[m
+[31m- [m
+[31m- <p align="center"><em>Site pessoal</p>[m
+[31m-[m
+[31m- ![App Preview](/assets/print/screen02.PNG)[m
+[31m-[m
+[31m-[m
+[31m-<p align="center"><em>Links para o SITE && PROJETO </p>[m
+[31m-[m
+[31m-<p align="center">[m
+[31m-    http://hackintosh-one.vercel.app/    https://www.figma.com/@juniorx[m
+[31m-</p>[m
+[31m-[m
+[31m-<p align="center" float="left">[m
+[31m-    <img src="/assets/screen/react.png" width="72" /> [m
+[31m-    <img src="/assets/screen/Figma.svg" width="54" /> [m
+[31m-</p>[m
+[31m-[m
+[31m-[m
+[31m-<p align="center">[m
+[31m- <a href="#prototipo">DEV & CMD</a> •[m
+[31m-</p>[m
+[31m-[m
+[31m-[m
+[31m-<p align="center"> <em>Para a criação do site é utilizado o JavaScript junto ao framework ReactJS e SKYNEXUI para componentes com o intuito de ser um Bate-Papo online e cadastros de usuários sendo o a plataforma utilizado para o levantamento do projeto Vercel e facilitação do BackEnd o Supabase para DataBase e Nextjs para o servidor das API's. </p>[m
+[32m+[m[32m# orgs-cesta[m[41m[m
+[32m+[m[32mReact Native App[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m#[m[41m [m
+[32m+[m[41m[m
+[32m+[m[32m <h1 align="center">Shop App verduras</h1>[m[41m[m
+[32m+[m[32m <p align="center">🚀</p>[m[41m[m
+[32m+[m[41m [m
+[32m+[m[32m <p align="center"><em>Desenvolvimento de uma tela simples para a finalização de uma compra</p>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m ![App Preview](/assets/print/screen04.PNG)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m<p align="center"><em>Links para o SITE && PROJETO </p>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m<p align="center">[m[41m[m
+[32m+[m[32m    http://hackintosh-one.vercel.app/    https://www.figma.com/@juniorx[m[41m[m
+[32m+[m[32m</p>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m<!-- <p align="center" float="left">[m[41m[m
+[32m+[m[32m    <img src="/assets/screen/react.png" width="72" />[m[41m [m
+[32m+[m[32m    <img src="/assets/screen/Figma.svg" width="54" />[m[41m [m
+[32m+[m[32m</p> -->[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m<p align="center">[m[41m[m
+[32m+[m[32m <a href="#prototipo">STEPS</a> •[m[41m[m
+[32m+[m[32m</p>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m<p align="center">Deevelop phases.</p>[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m----[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m ![App Preview](/assets/print/screen01.PNG)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m----[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m ![App Preview](/assets/print/screen02.PNG)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m----[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m ![App Preview](/assets/print/screen03.PNG)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m----[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m ![App Preview](/assets/print/screen04.PNG)[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m----[m
+\ No newline at end of file[m
+[1mdiff --git a/assets/adaptive-icon.png b/assets/adaptive-icon.png[m
+[1mindex 93c740d..e2b34f9 100644[m
+Binary files a/assets/adaptive-icon.png and b/assets/adaptive-icon.png differ
+[1mdiff --git a/assets/icon.png b/assets/icon.png[m
+[1mindex 0fcf230..e2b34f9 100644[m
+Binary files a/assets/icon.png and b/assets/icon.png differ
+[1mdiff --git a/assets/splash.png b/assets/splash.png[m
+[1mindex 112d066..fc694c0 100644[m
+Binary files a/assets/splash.png and b/assets/splash.png differ
+[1mdiff --git a/assets/topo.png b/assets/topo.png[m
+[1mindex 9599dae..b0d31c1 100644[m
+Binary files a/assets/topo.png and b/assets/topo.png differ
+[1mdiff --git a/src/components/Texto.js b/src/components/Texto.js[m
+[1mindex 3c44255..5c2def6 100644[m
+[1m--- a/src/components/Texto.js[m
+[1m+++ b/src/components/Texto.js[m
+[36m@@ -1,24 +1,24 @@[m
+[31m-import React from "react";[m
+[31m-import { StyleSheet, Text } from "react-native";[m
+[31m-[m
+[31m-export default function Texto({children, style}) {[m
+[31m-[m
+[31m-    let estilo = estilos.texto;[m
+[31m-[m
+[31m-    if (style?.fontWeight === "bold"){[m
+[31m-        estilo = estilos.textoNegrito;[m
+[31m-    }[m
+[31m-[m
+[31m-    return <Text style={[style, estilo]}>{ children }</Text>[m
+[31m-}[m
+[31m-[m
+[31m-const estilos = StyleSheet.create({[m
+[31m-    texto: {[m
+[31m-        fontFamily: "MontserratRegular",[m
+[31m-        fontWeight: "normal",[m
+[31m-    },[m
+[31m-    textoNegrito: {[m
+[31m-        fontFamily: "MontserratBold",[m
+[31m-        fontWeight: "normal",[m
+[31m-    },[m
+[31m-})[m
+\ No newline at end of file[m
+[32m+[m[32mimport React from "react";[m[41m[m
+[32m+[m[32mimport { StyleSheet, Text } from "react-native";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mexport default function Texto({children, style}) {[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    let estilo = estilos.texto;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    if (style?.fontWeight === "bold"){[m[41m[m
+[32m+[m[32m        estilo = estilos.textoNegrito;[m[41m[m
+[32m+[m[32m    }[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32m    return <Text style={[style, estilo]}>{ children }</Text>[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst estilos = StyleSheet.create({[m[41m[m
+[32m+[m[32m    texto: {[m[41m[m
+[32m+[m[32m        fontFamily: "MontserratRegular",[m[41m[m
+[32m+[m[32m        fontWeight: "normal",[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    textoNegrito: {[m[41m[m
+[32m+[m[32m        fontFamily: "MontserratBold",[m[41m[m
+[32m+[m[32m        fontWeight: "normal",[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m})[m[41m [m
+\ No newline at end of file[m
+[1mdiff --git a/src/telas/Cesta/Cesta.js b/src/telas/Cesta/Cesta.js[m
+[1mindex 0f743ed..7670999 100644[m
+[1m--- a/src/telas/Cesta/Cesta.js[m
+[1m+++ b/src/telas/Cesta/Cesta.js[m
+[36m@@ -1,21 +1,34 @@[m
+[31m-import React from "react";[m
+[31m-import { Image, StyleSheet, Dimensions, View } from "react-native";[m
+[31m-import Texto from "../../components/Texto";[m
+[31m-import Detalhes from "./Componentes/Detalhes";[m
+[31m-import Topo from "./Componentes/Topo";[m
+[31m-[m
+[31m-export default function Cesta () {[m
+[31m-    return <>[m
+[31m-        <Topo/>[m
+[31m-        <View style={estilos.cesta}>[m
+[31m-           <Detalhes/>[m
+[31m-        </View>[m
+[31m-    </>[m
+[31m-}[m
+[31m-[m
+[31m-const estilos = StyleSheet.create({[m
+[31m-    cesta: {[m
+[31m-        paddingVertical: 8,[m
+[31m-        paddingHorizontal: 16,[m
+[31m-    }[m
+[32m+[m[32mimport React from "react";[m[41m[m
+[32m+[m[32mimport { StyleSheet, View, TouchableOpacity } from "react-native";[m[41m[m
+[32m+[m[32mimport Texto from "../../components/Texto";[m[41m[m
+[32m+[m[32m//import Texto from "../../components/Texto";[m[41m[m
+[32m+[m[32mimport Detalhes from "./Componentes/Detalhes";[m[41m[m
+[32m+[m[32mimport Topo from "./Componentes/Topo";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mexport default function Cesta() {[m[41m[m
+[32m+[m[32m    return <>[m[41m[m
+[32m+[m[32m        <Topo/>[m[41m[m
+[32m+[m[32m        <View style={estilos.cesta}>[m[41m[m
+[32m+[m[32m           <Detalhes/>[m[41m[m
+[32m+[m[32m           <TouchableOpacity style={estilos.buttonStyle}>[m[41m[m
+[32m+[m[32m                <Texto style={{color: "white",}}>Confirmar</Texto>[m[41m[m
+[32m+[m[32m            </TouchableOpacity>[m[41m[m
+[32m+[m[32m        </View>[m[41m[m
+[32m+[m[32m    </>[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst estilos = StyleSheet.create({[m[41m[m
+[32m+[m[32m    cesta: {[m[41m[m
+[32m+[m[32m        paddingVertical: 8,[m[41m[m
+[32m+[m[32m        paddingHorizontal: 16,[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    buttonStyle: {[m[41m[m
+[32m+[m[32m        margin: 36,[m[41m[m
+[32m+[m[32m        marginTop: 90,[m[41m[m
+[32m+[m[32m        paddingVertical: 15,[m[41m[m
+[32m+[m[32m        backgroundColor: "#754e9c",[m[41m[m
+[32m+[m[32m        alignItems: "center",[m[41m[m
+[32m+[m[32m        borderRadius: 12,[m[41m[m
+[32m+[m[32m    }[m[41m[m
+ })[m
+\ No newline at end of file[m
+[1mdiff --git a/src/telas/Cesta/Componentes/Detalhes.js b/src/telas/Cesta/Componentes/Detalhes.js[m
+[1mindex fca1d73..c5f54c3 100644[m
+[1m--- a/src/telas/Cesta/Componentes/Detalhes.js[m
+[1m+++ b/src/telas/Cesta/Componentes/Detalhes.js[m
+[36m@@ -1,54 +1,53 @@[m
+[31m-import React from "react";[m
+[31m-import { View, Image, StyleSheet } from 'react-native';[m
+[31m-import Texto from "../../../components/Texto";[m
+[31m-import logo from "../../../../assets/logo.png";[m
+[31m-[m
+[31m-export default function Detalhes() {[m
+[31m-    return([m
+[31m-        <>[m
+[31m-            <Texto style={estilos.nome}>Cesta de Verduras</Texto>[m
+[31m-            <View style={estilos.fazenda}>[m
+[31m-            <Image source={logo} style={estilos.imagemFazenda}></Image>[m
+[31m-                <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>[m
+[31m-            </View>[m
+[31m-            <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente diretamente para sua cozinha</Texto>[m
+[31m-            <Texto style={estilos.preco}>R$ 40,00</Texto>[m
+[31m-        </>[m
+[31m-    )[m
+[31m-}[m
+[31m-[m
+[31m-const estilos = StyleSheet.create({[m
+[31m-    nome: {[m
+[31m-        color: "#464646",[m
+[31m-        fontSize: 26,[m
+[31m-        lineHeight: 42,[m
+[31m-        fontWeight: "bold",[m
+[31m-    },[m
+[31m-    fazenda: {[m
+[31m-        flexDirection: "row",[m
+[31m-        paddingVertical: 12,[m
+[31m-    },[m
+[31m-    imagemFazenda: {[m
+[31m-        width: 32,[m
+[31m-        height: 32,[m
+[31m-        fontFamily: 'MontserratRegular',[m
+[31m-    },[m
+[31m-    nomeFazenda: {[m
+[31m-        fontSize: 16,[m
+[31m-        lineHeight: 26,[m
+[31m-        marginLeft: 12,[m
+[31m-        fontFamily: "MontserratRegular",[m
+[31m-    },[m
+[31m-    descricao: {[m
+[31m-        color: "#A3A3A3",[m
+[31m-        fontSize: 16,[m
+[31m-        lineHeight: 26,[m
+[31m-    },[m
+[31m-    preco: {[m
+[31m-        color: '#2A9F85',[m
+[31m-        fontSize: 26,[m
+[31m-        lineHeight: 42,[m
+[31m-        marginTop: 8,[m
+[31m-        fontWeight: "bold",[m
+[31m-    }[m
+[32m+[m[32mimport React from "react";[m[41m[m
+[32m+[m[32mimport { View, Image, StyleSheet } from 'react-native';[m[41m[m
+[32m+[m[32mimport Texto from "../../../components/Texto";[m[41m[m
+[32m+[m[32mimport logo from "../../../../assets/logo.png";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mexport default function Detalhes() {[m[41m[m
+[32m+[m[32m    return([m[41m[m
+[32m+[m[32m        <>[m[41m[m
+[32m+[m[32m            <Texto style={estilos.nome}>Cesta de Verduras</Texto>[m[41m[m
+[32m+[m[32m            <View style={estilos.fazenda}>[m[41m[m
+[32m+[m[32m            <Image source={logo} style={estilos.imagemFazenda}></Image>[m[41m[m
+[32m+[m[32m                <Texto style={estilos.nomeFazenda}>Jenny Jack Farm</Texto>[m[41m[m
+[32m+[m[32m            </View>[m[41m[m
+[32m+[m[32m            <Texto style={estilos.descricao}>Uma cesta com produtos selecionados cuidadosamente diretamente para sua cozinha</Texto>[m[41m[m
+[32m+[m[32m            <Texto style={estilos.preco}>R$ 40,00</Texto>[m[41m[m
+[32m+[m[32m        </>[m[41m[m
+[32m+[m[32m    )[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst estilos = StyleSheet.create({[m[41m[m
+[32m+[m[32m    nome: {[m[41m[m
+[32m+[m[32m        color: "#464646",[m[41m[m
+[32m+[m[32m        fontSize: 26,[m[41m[m
+[32m+[m[32m        lineHeight: 42,[m[41m[m
+[32m+[m[32m        fontWeight: "bold",[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    fazenda: {[m[41m[m
+[32m+[m[32m        flexDirection: "row",[m[41m[m
+[32m+[m[32m        paddingVertical: 12,[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    imagemFazenda: {[m[41m[m
+[32m+[m[32m        width: 32,[m[41m[m
+[32m+[m[32m        height: 32,[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    nomeFazenda: {[m[41m[m
+[32m+[m[32m        fontSize: 16,[m[41m[m
+[32m+[m[32m        lineHeight: 26,[m[41m[m
+[32m+[m[32m        marginLeft: 12,[m[41m[m
+[32m+[m[41m        [m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    descricao: {[m[41m[m
+[32m+[m[32m        color: "#A3A3A3",[m[41m[m
+[32m+[m[32m        fontSize: 16,[m[41m[m
+[32m+[m[32m        lineHeight: 26,[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    preco: {[m[41m[m
+[32m+[m[32m        color: '#2A9F85',[m[41m[m
+[32m+[m[32m        fontSize: 26,[m[41m[m
+[32m+[m[32m        lineHeight: 42,[m[41m[m
+[32m+[m[32m        marginTop: 8,[m[41m[m
+[32m+[m[32m        fontWeight: "bold",[m[41m[m
+[32m+[m[32m    }[m[41m[m
+ })[m
+\ No newline at end of file[m
+[1mdiff --git a/src/telas/Cesta/Componentes/Topo.js b/src/telas/Cesta/Componentes/Topo.js[m
+[1mindex 74e843f..f479dad 100644[m
+[1m--- a/src/telas/Cesta/Componentes/Topo.js[m
+[1m+++ b/src/telas/Cesta/Componentes/Topo.js[m
+[36m@@ -1,35 +1,36 @@[m
+[31m-import React from "react";[m
+[31m-import { Dimensions, Image, StyleSheet } from "react-native";[m
+[31m-import Texto from "../../../components/Texto";[m
+[31m-import topo from "../../../../assets/topo.png";[m
+[31m-[m
+[31m-const width = Dimensions.get("screen").width;[m
+[31m-[m
+[31m-[m
+[31m-export default function Topo() {[m
+[31m-    return([m
+[31m-        <>[m
+[31m-            <Image source={topo} style={estilos.topo}/>[m
+[31m-            <Texto style={estilos.titulo} >Detalhe da Cesta</Texto>[m
+[31m-[m
+[31m-        </>[m
+[31m-    )[m
+[31m-}[m
+[31m-[m
+[31m-const estilos = StyleSheet.create({[m
+[31m-    topo: {[m
+[31m-        width: "100%",[m
+[31m-        height: 578 / 768 * width,[m
+[31m-        fontFamily: "MontserratRegular",[m
+[31m-    },[m
+[31m-    titulo: {[m
+[31m-        width: "100%",[m
+[31m-        position: "absolute",[m
+[31m-        textAlign: "center",[m
+[31m-        fontSize: 16,[m
+[31m-        lineHeight: 26,[m
+[31m-        color: "white",[m
+[31m-        fontWeight: "bold",[m
+[31m-        padding: 16,[m
+[31m-    },[m
+[32m+[m[32mimport React from "react";[m[41m[m
+[32m+[m[32mimport { Dimensions, Image, StyleSheet } from "react-native";[m[41m[m
+[32m+[m[32mimport Texto from "../../../components/Texto";[m[41m[m
+[32m+[m[32mimport topo from "../../../../assets/topo.png";[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst width = Dimensions.get("screen").width;[m[41m[m
+[32m+[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mexport default function Topo() {[m[41m[m
+[32m+[m[32m    return([m[41m[m
+[32m+[m[32m        <>[m[41m[m
+[32m+[m[32m            <Image source={topo} style={estilos.topo}/>[m[41m[m
+[32m+[m[32m            <Texto style={estilos.titulo} >Detalhe da Cesta</Texto>[m[41m[m
+[32m+[m[32m        </>[m[41m[m
+[32m+[m[32m    )[m[41m[m
+[32m+[m[32m}[m[41m[m
+[32m+[m[41m[m
+[32m+[m[32mconst estilos = StyleSheet.create({[m[41m[m
+[32m+[m[32m    topo: {[m[41m[m
+[32m+[m[32m        width: "100%",[m[41m[m
+[32m+[m[32m        height: 578 / 768 * width,[m[41m[m
+[32m+[m[32m        borderBottomLeftRadius: 60,[m[41m[m
+[32m+[m[32m        borderBottomRightRadius: 60,[m[41m[m
+[32m+[m[32m    },[m[41m[m
+[32m+[m[32m    titulo: {[m[41m[m
+[32m+[m[32m        width: "100%",[m[41m[m
+[32m+[m[32m        position: "absolute",[m[41m[m
+[32m+[m[32m        textAlign: "center",[m[41m[m
+[32m+[m[32m        fontSize: 16,[m[41m[m
+[32m+[m[32m        lineHeight: 26,[m[41m[m
+[32m+[m[32m        color: "white",[m[41m[m
+[32m+[m[32m        fontWeight: "bold",[m[41m[m
+[32m+[m[32m        padding: 16,[m[41m[m
+[32m+[m[32m        shadowColor: "#000",[m[41m[m
+[32m+[m[32m    },[m[41m[m
+ })[m
+\ No newline at end of file[m
