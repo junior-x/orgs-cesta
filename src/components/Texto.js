@@ -21,4 +21,4 @@ const estilos = StyleSheet.create({
         fontFamily: "MontserratBold",
         fontWeight: "normal",
     },
-})
+}) 

@@ -11,7 +11,6 @@ export default function Topo() {
         <>
             <Image source={topo} style={estilos.topo}/>
             <Texto style={estilos.titulo} >Detalhe da Cesta</Texto>
-
         </>
     )
 }
@@ -20,7 +19,8 @@ const estilos = StyleSheet.create({
     topo: {
         width: "100%",
         height: 578 / 768 * width,
-        fontFamily: "MontserratRegular",
+        borderBottomLeftRadius: 60,
+        borderBottomRightRadius: 60,
     },
     titulo: {
         width: "100%",
@@ -31,5 +31,6 @@ const estilos = StyleSheet.create({
         color: "white",
         fontWeight: "bold",
         padding: 16,
+        shadowColor: "#000",
     },
 })

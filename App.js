@@ -15,8 +15,8 @@ export default function App() {
 
   return (
     <SafeAreaView>
-      <StatusBar/>
-      <Cesta/>
+      <StatusBar />
+      <Cesta />
     </SafeAreaView>
   );
 }

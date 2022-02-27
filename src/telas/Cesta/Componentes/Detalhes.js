@@ -31,13 +31,12 @@ const estilos = StyleSheet.create({
     imagemFazenda: {
         width: 32,
         height: 32,
-        fontFamily: 'MontserratRegular',
     },
     nomeFazenda: {
         fontSize: 16,
         lineHeight: 26,
         marginLeft: 12,
-        fontFamily: "MontserratRegular",
+        
     },
     descricao: {
         color: "#A3A3A3",
